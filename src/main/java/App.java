@@ -6,7 +6,16 @@ public class App {
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
         HelloWorld bean =
-                (HelloWorld) applicationContext.getBean("helloworld");
+                (HelloWorld) applicationContext.getBean("helloworld"); // Стандартный HelloWorld
+        Cat catBean = (Cat) applicationContext.getBean("cat"); // Bean Cat
+        HelloWorld anotherBean = (HelloWorld) applicationContext.getBean("helloworld"); // 2-й экз Bean'а HelloWorld
+        Cat anotherCat = (Cat) applicationContext.getBean("cat"); // 2-й экз Bean'а Cat
         System.out.println(bean.getMessage());
+        System.out.println(catBean.getName());
+        System.out.println(anotherBean.getMessage());
+        System.out.println(anotherCat.getName());
+        System.out.println(bean.equals(anotherBean));
+        System.out.println(bean.equals(catBean));
+        System.out.println(catBean.equals(anotherCat));
     }
 }
