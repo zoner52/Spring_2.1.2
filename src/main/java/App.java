@@ -14,6 +14,7 @@ public class App {
         System.out.println(catBean.getName());
         System.out.println(anotherBean.getMessage());
         System.out.println(anotherCat.getName());
+
         System.out.println(bean.equals(anotherBean));
         System.out.println(bean.equals(catBean));
         System.out.println(catBean.equals(anotherCat));
